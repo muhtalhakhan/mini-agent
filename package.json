@@ -1,0 +1,35 @@
+{
+  "name": "mini-agent",
+  "version": "1.0.0",
+  "description": "Mini coding agent CLI implementing the Agent Skills specification",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "mini-agent": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc && chmod +x dist/index.js",
+    "start": "node scripts/run.mjs",
+    "dev": "tsx src/index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "@inquirer/prompts": "^7.0.0",
+    "boxen": "^7.1.1",
+    "chalk": "^5.3.0",
+    "gray-matter": "^4.0.3",
+    "openai": "^4.78.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.22.2",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.8"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
